@@ -1,7 +1,9 @@
 require("core.options")
 require("core.keymaps")
 require("core.lazy")
-require("core.colorscheme")
+
+-- 主题颜色
+vim.cmd("colorscheme tokyonight")
 
 -- 设置背景透明
 vim.cmd("autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE")
