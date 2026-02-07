@@ -34,8 +34,10 @@ return {
         main = "nvim-treesitter.configs",
         event = "VeryLazy",
         config = function()
-            local configs = require("nvim-treesitter.configs")
-            configs.setup({
+            -- local configs = require("nvim-treesitter.configs")
+            local ts = require("nvim-treesitter.config")
+            -- configs.setup({
+            ts.setup({
                 auto_install = true,
                 ensure_installed = {"c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html"},
                 sync_install = false,
