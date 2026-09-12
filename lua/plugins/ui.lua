@@ -103,7 +103,25 @@ return {
                     globalstatus = true,
                 },
                 sections = {
-                    lualine_a = { { "mode", fmt = function(str) return " " .. str end } },
+                    -- lualine_a = { { "mode", fmt = function(str) return " " .. str end } },
+                    lualine_a = {
+                        {
+                            "mode",
+                            fmt = function(str)
+                                local mode_icons = {
+                                    NORMAL   = " ",
+                                    INSERT   = "   ",
+                                    VISUAL   = "   ",
+                                    V_LINE   = "   ",
+                                    V_BLOCK  = "   ",
+                                    REPLACE  = "   ",
+                                    COMMAND  = " ",
+                                }
+                            local icon = mode_icons[str] or  " "
+                            return icon .. str
+                        end
+                        }
+                    },
                     lualine_b = { "branch", "diff", { "diagnostics", sources = { "nvim_lsp" }, symbols = { error = " ", warn = " ", info = " ", hint = " " } } },
                     lualine_c = {
                         { "filename", path = 1, symbols = { modified = "●", readonly = "", unnamed = "" } },
