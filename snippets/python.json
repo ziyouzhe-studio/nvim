@@ -1,7 +1,9 @@
 {
   "df.Histo1D": {
     "prefix": "histo1d",
-    "body": ["df.Histo1D((${1:binning}), \"${2:branch}\")"]
+    "body": [
+      "df.Histo1D((${1:binning}), \"${2:branch}\")"
+    ]
   },
   "Read Yaml": {
     "prefix": "ryaml",
@@ -33,31 +35,46 @@
   },
   "cwd": {
     "prefix": "cwd",
-    "body": ["cwd = get_cwd(__file__)"]
+    "body": [
+      "cwd = get_cwd(__file__)"
+    ]
   },
   "numcpu": {
     "prefix": "numcpu",
-    "body": ["ROOT.RooFit.NumCPU(${1})"]
+    "body": [
+      "ROOT.RooFit.NumCPU(${1})"
+    ]
   },
   "th1d": {
     "prefix": "th1d",
-    "body": ["ROOT.TH1D(\"${1:h}\", \"${2:h}\", ${3:binning})"]
+    "body": [
+      "ROOT.TH1D(\"${1:h}\", \"${2:h}\", ${3:binning})"
+    ]
   },
   "th2d": {
     "prefix": "th2d",
-    "body": ["ROOT.TH2D(\"${1:h}\", \"${2:h}\", ${3:binning})"]
+    "body": [
+      "ROOT.TH2D(\"${1:h}\", \"${2:h}\", ${3:binning})"
+    ]
   },
   "Multithreading": {
     "prefix": "mt",
-    "body": ["ROOT.EnableImplicitMT()"]
+    "body": [
+      "ROOT.EnableImplicitMT()"
+    ]
   },
   "Multithreading Disable": {
     "prefix": "mtd",
-    "body": ["ROOT.DisableImplicitMT()"]
+    "body": [
+      "ROOT.DisableImplicitMT()"
+    ]
   },
   "Import ROOT": {
     "prefix": "root",
-    "body": ["import ROOT", "ROOT.gROOT.SetBatch(True)"]
+    "body": [
+      "import ROOT",
+      "ROOT.gROOT.SetBatch(True)"
+    ]
   },
   "canvas": {
     "prefix": "canvas",
@@ -69,7 +86,10 @@
   },
   "import matplotlib": {
     "prefix": "mpl",
-    "body": ["import matplotlib as mpl", "mpl.use(\"Agg\")"]
+    "body": [
+      "import matplotlib as mpl",
+      "mpl.use(\"Agg\")"
+    ]
   },
   "argg": {
     "prefix": "argg",
